@@ -1,0 +1,157 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Header */
+
+header{
+  width: 100%;
+  background: #461d3dd0;
+  position: fixed;
+  padding: 0 20px;
+}
+
+header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  color: #fff;
+  font-size: 35px;
+  text-transform: capitalize;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .4s;
+}
+
+nav ul li{
+  line-height: 60px;
+  margin: 0 5px;
+}
+
+nav ul a{
+  color: #fff;
+  font-size: 18px;
+  padding: 5px 13px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: .4s;
+}
+
+nav ul a:hover{
+  background: #ff58db;
+
+}
+
+.checkbtn{
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  display: none;
+}
+
+#check{
+  display: none;
+}
+
+@media screen and (max-width:850px){
+  .checkbtn{
+      display: block
+}
+  nav{
+      flex-direction: row-reverse;
+  }
+  .logo{
+      font-size: 25px;
+  }
+  nav ul{
+      position: fixed;
+      top: 60px;
+      flex-direction: column;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      height: 100vh;
+      align-items: flex-start;
+      justify-content: flex-start;
+      overflow: hidden;
+      left: -100%;
+      opacity: 0;
+  }
+
+  nav ul li{
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+  }
+
+  nav ul a{
+      display: block;
+      font-size: 16px;
+  }
+
+  #check:checked~ul{
+      left: 0;
+      opacity: 1;
+  }
+}
+/* end of header */
+
+main{
+  height: 100vh;
+  width: 100%;
+  
+}
+
+section{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px;
+}
+
+/* #home{
+  background: url(./img/1.jpeg) no-repeat center /cover;
+} */
+
+section h1, section h2{
+  color: white;
+  text-transform: uppercase;
+  font-size: 62px;
+}
+
+section p{
+  padding: 50px;
+  font-size: 20px;
+  color: #fff;
+  text-align: justify;
+}
+
+#about{
+  background: #262626;
+}
+
+/* #services{
+  background: url(./img/2.jpeg) no-repeat center /cover;
+}
+
+#contacts{
+  background: url(./img/3.jpeg) no-repeat center /cover;
+}
+
+#feedback{
+  background: url(./img/4.jpeg) no-repeat center /cover;
+} */
